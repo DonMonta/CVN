@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 <!--
    
 -->
@@ -27,15 +28,36 @@
 <body>
 
    
-<header class="main-header clearfix" role="header" style="text-align: center;">
-  <div class="logo">
-    <a href="#"><em>Universidad Técnica</em> “Luis Vargas Torres” de Esmeraldas</a>
-  </div>
-</header>
+  <header id="header" class="main-header clearfix header d-flex align-items-center" role="header" style="text-align: center;">
+    <div class="logo container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="#" class="logo d-flex align-items-center"><em>Universidad Técnica</em> “Luis Vargas Torres” de Esmeraldas</a>
+    </div>
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
+     
 
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  
+
+  
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
+    
       <video autoplay muted loop id="bg-video">
           <source src="assets/images/course-video.mp4" type="video/mp4" />
       </video>
@@ -403,6 +425,7 @@
     <script src="assets/js/video.js"></script>
     <script src="assets/js/slick-slider.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
         //according to loftblog tut
         $('.nav li:first').addClass('active');
