@@ -67,7 +67,7 @@
     .navbar .active,
     .navbar .active:focus,
     .navbar li:hover>a {
-      color: #fff;
+      color: #f5a425;
     }
   
     .navbar .dropdown ul {
@@ -197,7 +197,7 @@
     .navbar .active,
     .navbar .active:focus,
     .navbar li:hover>a {
-      color: #fff;
+      color: #f5a425;
     }
   
     .navbar .dropdown ul,
@@ -250,7 +250,7 @@
       content: "";
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.6);
+      background: #f5a425;
       z-index: 9996;
     }
   }
