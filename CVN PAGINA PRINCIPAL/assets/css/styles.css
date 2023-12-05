@@ -1,0 +1,12 @@
+/* styles.css */
+.white-text {
+  color: white;
+}
+
+.login-text {
+  margin-bottom: 40px; /* Puedes ajustar el valor según tus necesidades */
+}
+
+.email-input {
+  margin-top: 10px; /* Puedes ajustar el valor según tus necesidades */
+}
