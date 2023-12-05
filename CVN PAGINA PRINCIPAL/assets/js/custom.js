@@ -103,4 +103,24 @@
 	initializeClock(((new Date()).getFullYear()+1) + "/1/1")
 	})()
 
+	$(document).ready(function () {
+		// Selecciona el elemento de la barra de navegación
+		var header = $("#header");
+	 
+		// Escucha el evento de desplazamiento
+		$(window).scroll(function () {
+			// Calcula la nueva posición de la barra de navegación
+			var scrollPosition = $(this).scrollTop();
+	 
+			// Aplica la nueva posición a la barra de navegación con una transición más rápida (0.2 segundos)
+			header.css("transition", "transform 0.0s ease-in-out");
+			header.css("transform", "translateY(" + scrollPosition + "px)");
+	 
+			// Restaura la duración de la transición después de 0.2 segundos para futuros desplazamientos
+			setTimeout(function () {
+				header.css("transition", "transform 0.0s ease-in-out");
+			}, 200);
+		});
+	 });
+
 })(jQuery);

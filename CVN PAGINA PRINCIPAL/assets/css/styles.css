@@ -10,3 +10,10 @@
 .email-input {
   margin-top: 10px; /* Puedes ajustar el valor según tus necesidades */
 }
+
+#header {
+  transition: transform 0.0s ease-in-out;
+  background-color: rgb(1, 0, 31)3; /* Fondo de la barra de navegación */
+  color: white; /* Color del texto en la barra de navegación */
+  padding: 15px; /* Espaciado interno */
+}
