@@ -91,7 +91,7 @@
 	  function initializeClock(endtime){
 	  var timeinterval = setInterval(function(){
 	    var t = getTimeRemaining(endtime);
-	    document.querySelector(".days > .value").innerText=t.days;
+	    //document.querySelector(".days > .value").innerText=t.days;
 	    document.querySelector(".hours > .value").innerText=t.hours;
 	    document.querySelector(".minutes > .value").innerText=t.minutes;
 	    document.querySelector(".seconds > .value").innerText=t.seconds;
@@ -102,7 +102,7 @@
 	}
 	initializeClock(((new Date()).getFullYear()+1) + "/1/1")
 	})()
-
+ 	/*
 	$(document).ready(function () {
 		// Selecciona el elemento de la barra de navegación
 		var header = $("#header");
@@ -122,5 +122,40 @@
 			}, 200);
 		});
 	 });
+	 */
+	
+	 $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.sticky-top').addClass('shadow-sm').css('top', '0px');
+        } else {
+            $('.sticky-top').removeClass('shadow-sm').css('top', '-300px');
+        }
+    });
+	 // Smooth scrolling on the navbar links
+	 $(".navbar-nav a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            
+            $('html, body').animate({
+                scrollTop: $(this.hash).offset().top - 90
+            }, 1500, 'easeInOutExpo');
+            
+            if ($(this).parents('.navbar-nav').length) {
+                $('.navbar-nav .active').removeClass('active');
+                $(this).closest('a').addClass('active');
+            }
+        }
+    });
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 300) {
+			$('.back-to-top').fadeIn('slow');
+		} else {
+			$('.back-to-top').fadeOut('slow');
+		}
+		});
+		$('.back-to-top').click(function () {
+			$('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+			return false;
+		});
 
 })(jQuery);

@@ -32,30 +32,34 @@
 
 <body>
 
-   
-  <header id="header" class="main-header clearfix header d-flex align-items-center" role="header" style="text-align: center;">
-    <div class="logo container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="#" class="logo d-flex align-items-center"><em>UTL</em>VTE</a>
-    </div>
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  <div class="container-fluid sticky-top px-0">
+    <div class="container-fluid px-0">
+      <div class="container-fluid px-0">
 
-     
-
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      <nav id="navbar" class="navbar nuevabarra">
-        <ul>
-          <li><a href="index.html" class="active">Inicio</a></li>
+        <nav class="logo navbar navbar-expand-lg" id="navBar">
+          <a href="#" class="logo d-flex align-items-center"><em>UTL</em>VTE</a>
+          <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars text-primary"></span>
+          </button>
+          <div class="collapse navbar-collapse py-3" id="navbarCollapse">
+            <div class="navbar-nav ml-xl-auto border-top">
+              <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                  
+              <a href="#IniciarSesion" class="nav-item nav-link">Iniciar Sesión</a>
+              <a href="services.html" class="nav-item nav-link">Nuevo</a>
+            
+              <a href="projects.html" class="nav-item nav-link">Registrarse</a>
+            </div>
+                
+          </div>
+        </nav>
+      
           
-          <li><a href="about.html">Iniciar Sesión</a></li>
-          <li><a href="services.html">Nuevo</a></li>
-          <!-- .Cambio del nombre Projects a Registrarse -->
-          <li><a href="projects.html">Registrarse</a></li>
-        </ul>
-      </nav><!-- .navbar -->
-
+      </div>
     </div>
-  </header>
+    
+  </div> 
+  
   
 
   
@@ -177,74 +181,83 @@
 
 
   <section class="section coming-soon" data-section="section3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7 col-xs-12">
-          <div class="continer centerIt">
-            <div>
-              
-              
+    <div class="container-fluid position-relative py-5" id="IniciarSesion"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 col-xs-12">
+            <div class="continer centerIt">
+              <div>
+                
+                
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-5">
-          <div class="right-content">
-            <div class="top-content">    
-              <h6>Registra tu cuenta o accede para llenar tu currículum normalizado por la UTELVT</h6>
-            </div>
-            <div class="registration-form">
-              <form id="login-form" action="/login" method="post">
-                <div class="row">
-                  <div class="col-md-12">
-                    <fieldset>
-                      <div class="login-text white-text">
-                        ¡Bienvenido de nuevo! Por favor, inicia sesión para continuar.</p>
+          <div class="col-md-5">
+            <div class="right-content">
+              
+                <div class="top-content">    
+                  <h6>Registra tu cuenta o accede para llenar tu currículum normalizado por la UTELVT</h6>
+                </div>
+                <div class="registration-form">
+                  <form id="login-form" action="/login" method="post">
+                  
+                      <div class="row">
+                        <div class="col-md-12">
+                          <fieldset>
+                            <div class="login-text white-text">
+                              ¡Bienvenido de nuevo! Por favor, inicia sesión para continuar.</p>
+                            </div>
+                            <input name="email" type="email" class="form-control" id="email" placeholder="Correo Institucional" required>
+                          </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                          <fieldset>
+                            <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                          </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                          <fieldset>
+                            <button type="submit" class="button">Iniciar Sesión</button>
+                          </fieldset>
+                        </div>
                       </div>
-                      <input name="email" type="email" class="form-control" id="email" placeholder="Correo Institucional" required>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña" required>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <button type="submit" class="button">Iniciar Sesión</button>
-                    </fieldset>
-                  </div>
+                   
+                    
+                  </form>
+            
+                  <form id="registration-form" action="/register" method="post">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <fieldset>
+                          <input name="name" type="text" class="form-control" id="name" placeholder="Nombres Completos" required>
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <input name="email" type="email" class="form-control" id="email" placeholder="Correo Institucional" required>
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <input name="phone-number" type="text" class="form-control" id="phone-number" placeholder="Número Telefónico" required>
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <button type="submit" class="button">Registrarse</button>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-              </form>
-        
-              <form id="registration-form" action="/register" method="post">
-                <div class="row">
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Nombres Completos" required>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input name="email" type="email" class="form-control" id="email" placeholder="Correo Institucional" required>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input name="phone-number" type="text" class="form-control" id="phone-number" placeholder="Número Telefónico" required>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <button type="submit" class="button">Registrarse</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
+              
+              
             </div>
           </div>
-        </div>
-        </div>
-        </section>        
+      </div>
+    </div>
+    
+  </section>        
 
   <section class="section courses" data-section="section4">
     <div class="container-fluid">
